@@ -1,0 +1,149 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "gleegoo";
+}
+
+#slider-wrapper {
+    width: 100vw;
+    height: 100vh;
+    z-index: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.navbar-default .navbar-brand {
+    
+    color: white;
+    font-family: "GreatVibes";
+    font-size: 270%;
+
+}
+
+nav.navbar {
+    z-index: 1;
+    background-color: rgba(255,255,255,0.6);
+
+    ul.navbar-right {
+        li {
+            a::before {
+                display: none;
+            }
+        }
+    }
+}
+.nav.navbar-nav.navbar-right li a {
+    color: purple;
+    display: inline-block;
+    font-size: 130%;
+}
+
+
+#content-main {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin-top: 100px;
+
+}
+
+
+#content-header {
+    width: 100vw;
+    min-height: 40vh;
+    z-index: 5;
+}
+
+
+.section-1-parent {
+
+    font-size: 130%;
+    background-color: rgba(255,255,255,0.6);
+    overflow: hidden;
+    overflow-x: hidden;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 160px;
+    margin-top: 100px;
+    b-index: 99;
+
+}
+
+.section-1-child {
+    display: flex;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: -20px; //Increase/Decrease this value for cross-browser compatibility
+    }
+
+.post-title {
+    color: white;
+}
+
+.post-title a:hover{
+    color: red;
+}
+
+.sign-up {
+    color: purple;
+}
+
+.toc-headers{
+    color: purple;
+}
+
+#toc-items{
+    color: purple;
+}
+
+#toc-items a{
+    color: white;
+}
+
+
+.alain-footer {
+    position: fixed;
+    bottom: 90px;
+    left: 0;
+    right:0;
+    background-color: rgba(255,255,255,0.6);
+}
+
+.guide {
+	font-size: 20px;
+    padding: 15px;
+}
+
+.wpcf7-form {
+    margin-left: auto;
+    margin-right: auto;
+    width: 450px; // Add desired value here
+    float: none;
+    display: block;
+}
+
+.col-12-alain-contact{
+
+}
+
+.row-alain-contact-content{
+    width:100%;
+
+}
+
+.col-sm-8-alain-content{
+
+}
+
+.col-sm-4-alain-toc{
+
+}

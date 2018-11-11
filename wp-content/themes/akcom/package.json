@@ -1,0 +1,13 @@
+{
+  "name": "ourframework",
+  "version": "0.1.0",
+  "devDependencies": {
+  	"grunt": "~0.4.1",
+  	"grunt-contrib-compass": "*",
+  	"grunt-browser-sync": "*",
+    "grunt-contrib-watch": "*",
+    "grunt-concurrent": "*",
+    "grunt-contrib-uglify": "*",
+    "matchdep": "*"
+  }
+}
