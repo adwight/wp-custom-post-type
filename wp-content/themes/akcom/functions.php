@@ -1,5 +1,36 @@
 <?php
 
+function create_post_types() {
+    register_post_type( 'people',
+        array(
+            'labels' => array(
+                'name' => __( 'people' ),
+                'singular_name' => __( 'person' )
+            ),
+            'description' => 'People to be listed on team page.',
+            'public' => true,
+            'supports' => array(
+                'title', 
+                'editor', 
+                'custom-fields'
+            )
+        )
+    );
+}
+
+function create_post_type() {
+  register_post_type( 'acme_product',
+    array(
+      'labels' => array(
+        'name' => __( 'Products' ),
+        'singular_name' => __( 'Product' )
+      ),
+      'public' => true,
+      'has_archive' => true,
+    )
+  );
+}
+
 function alaink_scripts()
 {
     wp_enqueue_style('customstyle', get_template_directory_uri() . '/css/style.css', array(), '1.0.0', 'all');
