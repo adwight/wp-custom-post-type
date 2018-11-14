@@ -62,10 +62,6 @@
                 <ul>
                     <li data-transition="fade">
                         <!-- MAIN IMAGE -->
-                        <img src="<?php echo get_template_directory_uri(); ?>/images/01.jpg" width="100%" height="100%">
-                    </li>
-                    <li data-transition="fade">
-                        <!-- MAIN IMAGE -->
                     <img src="<?php echo get_template_directory_uri(); ?>/images/02.jpg" width="100%" height="100%">
                     </li>
                 </ul>
