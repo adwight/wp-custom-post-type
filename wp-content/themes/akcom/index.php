@@ -5,51 +5,25 @@
 			<div class="section-1-parent">
 				<div class="section-1-child">
 					<div class="row-alain-content">						
-                        <div class="col-12 col-md-10">
+                        <div class="col-12 col-md-12">
+                        
+                                <h2>Meet the team!</h2>
                                 <?php
-                                $args = array( 'category' => 6, 'post_type' =>  'post', 'posts_per_page' => -1, 'post_status' => 'publish');
-                                $postslist = get_posts($args);
-                                foreach ($postslist as $post) :
-                                    setup_postdata($post);
-                            ?>
-                                    <h2><a <a class="post-title" href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-                                    	<a class="sign-up" href="http://alainkassabian.com/?page_id=117">Click Here to Subscribe!</a>
-                                        <?php the_excerpt(); ?>
-                                        <?php endforeach; ?>
-                                <?php
-                                $args = array( 'category' => 4, 'post_type' =>  'post', 'posts_per_page' => -1, 'post_status' => 'publish');
-                                $postslist = get_posts($args);
-                                foreach ($postslist as $post) :
-                                    setup_postdata($post);
-                            ?>
-                                    <h2><a class="post-title" href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-                                    	<a class="sign-up" href="http://alainkassabian.com/?page_id=117">Click Here to Subscribe!</a>
-                                        <?php the_excerpt(); ?>
-                                        <?php endforeach; ?>
+                                $args = array( 'post_type' => 'people', 'posts_per_page' => -1 );
+                                $loop = new WP_Query( $args );
+                                while ( $loop->have_posts() ) : $loop->the_post();
+                                    echo '<div>Name: ';
+                                    the_field( 'Name' );
+                                    echo '</div><div>Title: ';
+                                    the_field( 'Title' );
+                                    echo '</div><div>Bio: ';
+                                    the_field( 'Bio' );
+                                    echo '</div><br>';
+                                endwhile;
+                                ?>
 
                         </div>	
-						<div class="col-12 col-md-2">
-							
-
-
-<?php     
-// CONVERT TO CATAGORIES RATHER THAN SUB
-   $categories =  get_categories();  
-foreach  ($categories as $category) if ($tmp++ < 3) {
-    //Display the sub category information using $category values like $category->cat_name
-    echo '<h2 class="toc-headers">'.$category->name.'</h2>';
-    echo '<ul id="toc-items">';
-
-    $args = array( 'category' => $category->term_id, 'post_type' =>  'post', 'posts_per_page' => -1, 'post_status' => 'publish');
-    foreach (get_posts($args) as $post) {
-        setup_postdata( $post );
-        echo '<li><a href="'.get_permalink($post->ID).'">'.get_the_title().'</a></li>';   
-    }  
-    echo '</ul>';
-}
-     ?>
-
-						</div>						
+						
 					</div>
 				</div>
 			</div>
